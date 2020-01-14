@@ -53,7 +53,6 @@ int main(int argc, char **argv) {
 
 	childpid = wait(&status);
 	while (childpid>0) {
-		printf("%d\n", childpid);
 		if (childpid>0) {
 			if (WIFEXITED(status)) {
 				printf("child %d exited, status=%d\n",childpid, WEXITSTATUS(status));
